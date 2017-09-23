@@ -13,6 +13,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
+import com.google.gson.annotations.SerializedName;
+
 
 @Entity
 @Table(name = "user", catalog = "babycare")
@@ -25,36 +27,47 @@ public class User extends BaseModel implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="userid")
+	@SerializedName("userId")
 	private Long userId;
 	
 	@Column(name="name")
+	@SerializedName("name")
 	private String name;
 	
 	@Column(name="hardwareid")
+	@SerializedName("hardwareId")
 	private String hardwareId;
 	
 	@Column(name="babydob")
+	@SerializedName("babyDob")
 	private Long babyDob;
 
 	@Column(name="dob")
+	@SerializedName("dob")
 	private Long dob;
 
 	@Column(name="status")
+	@SerializedName("status")
 	private Integer status;
 
 	@Column(name="provider")
+	@SerializedName("provider")
 	private String provider;
 
 	@Column(name="pushid")
+	@SerializedName("status")
 	private String pushId;
 
 	@Column(name="password")
+	@SerializedName("password")
 	private String password;
 
 	@Column(name="lastactivetimestamp")
+	@SerializedName("lastactivetimestamp")
 	private Long lastactivetimestamp;
 	
 	@Column(name="email")
+	@SerializedName("email")
 	private String email;
 
 	@Column(name="platform")
@@ -62,6 +75,9 @@ public class User extends BaseModel implements Serializable {
 
 	public User() {}
 	
+	public User(Error error) {
+		setError(error);
+	}
 
 	public String getName() {
 		return name;

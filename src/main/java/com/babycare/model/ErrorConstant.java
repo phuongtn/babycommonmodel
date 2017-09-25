@@ -16,4 +16,13 @@ public class ErrorConstant {
 	public static final Long ERROR_INPUT_ERROR = 5L;
 	public static final String ERROR_INPUT_ERROR_MESSAGE = "Invalid Data Input";
 
+	public static final Long ERROR_UPDATE_SESSION = 6L;
+	public static final String ERROR_UPDATE_SESSION_MESSAGE = "Failed in updating session";
+	
+	public static final Long ERROR_ADD_SESSION = 7L;
+	public static final String ERROR_ADD_SESSION_MESSAGE = "Failed in adding session";
+	
+	public static final Long ERROR_SESSION_NOT_EXIST = 8L;
+	public static final String ERROR_SESSION_NOT_EXIST_MESSAGE = "Session not exist";
+
 }

@@ -1,9 +1,12 @@
 package com.babycare.model;
 
+import javax.persistence.Transient;
+
 import com.google.gson.annotations.SerializedName;
 
 public abstract class BaseModel {
 	@SerializedName("error")
+	@Transient
 	protected Error error;
 	
 	protected String getVersion() {

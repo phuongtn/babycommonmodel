@@ -24,5 +24,11 @@ public class ErrorConstant {
 	
 	public static final Long ERROR_SESSION_NOT_EXIST = 8L;
 	public static final String ERROR_SESSION_NOT_EXIST_MESSAGE = "Session not exist";
+	
+	public static final Long ERROR_UPDATE_SESSION_STATUS = 9L;
+	public static final String ERROR_UPDATE_SESSION_STATUS_MESSAGE = "Failed in updating session status";
+	
+	public static final Long ERROR_CREATE_USER = 10L;
+	public static final String ERROR_CREATE_USER_MESSAGE = "Failed in creating user";
 
 }

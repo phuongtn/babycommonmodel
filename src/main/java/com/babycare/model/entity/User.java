@@ -1,12 +1,14 @@
 package com.babycare.model.entity;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
@@ -17,11 +19,10 @@ import com.babycare.model.BaseModel;
 import com.babycare.model.Error;
 import com.google.gson.annotations.SerializedName;
 
-
-@Entity
 /*@Table(name = "user", catalog = "babycare", uniqueConstraints = {
-		@UniqueConstraint(columnNames = "email"),
-		@UniqueConstraint(columnNames = "provider") })*/
+@UniqueConstraint(columnNames = "email"),
+@UniqueConstraint(columnNames = "provider") })*/
+@Entity
 @Table(name = "user", catalog = "babycare")
 public class User extends BaseModel implements Serializable {
 
@@ -50,8 +51,12 @@ public class User extends BaseModel implements Serializable {
 	@SerializedName("provider")
 	private String provider;
 
+	@OneToMany(mappedBy = "user")
+	@SerializedName("children")
+	private Set<Child> children;
+
 	public User() {}
-	
+
 	public User(Error error) {
 		setError(error);
 	}
@@ -110,4 +115,13 @@ public class User extends BaseModel implements Serializable {
 	public void setProvider(String provider) {
 		this.provider = provider;
 	}
+
+	public Set<Child> getChildren() {
+		return children;
+	}
+
+	public void setChildren(Set<Child> children) {
+		this.children = children;
+	}
+	
 }

@@ -33,5 +33,8 @@ public class ErrorConstant {
 	
 	public static final Long ERROR_UPDATE_SESSION_PUSHID = 11L;
 	public static final String ERROR_UPDATE_SESSION_PUSHID_MESSAGE = "Failed in updating pushId";
+	
+	public static final Long ERROR_UPDATE_USER = 12L;
+	public static final String ERROR_UPDATE_USER_MESSAGE = "Failed in updating user";
 
 }

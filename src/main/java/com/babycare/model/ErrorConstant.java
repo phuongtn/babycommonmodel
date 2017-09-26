@@ -30,5 +30,8 @@ public class ErrorConstant {
 	
 	public static final Long ERROR_CREATE_USER = 10L;
 	public static final String ERROR_CREATE_USER_MESSAGE = "Failed in creating user";
+	
+	public static final Long ERROR_UPDATE_SESSION_PUSHID = 11L;
+	public static final String ERROR_UPDATE_SESSION_PUSHID_MESSAGE = "Failed in updating pushId";
 
 }

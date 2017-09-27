@@ -1,6 +1,10 @@
 package com.babycare.model;
 
 public class ErrorConstant {
+	
+	public static final Long ERROR_UNKNOWN = 0L;
+	public static final String ERROR_UNKNOWN_MESSAGE = "Unknown exception";
+	
 	public static final Long ERROR_EMAIL_INVALID = 1L;
 	public static final String ERROR_EMAIL_INVALID_MESSAGE = "Invalid email";
 

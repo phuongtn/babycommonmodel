@@ -5,7 +5,7 @@ public class ErrorConstant {
 	public static final String ERROR_EMAIL_INVALID_MESSAGE = "Invalid email";
 
 	public static final Long ERROR_USER_NOT_EXIST = 2L;
-	public static final String ERROR_USER_NOT_EXIST_MESSAGE = "User does not exist";
+	public static final String ERROR_USER_NOT_EXIST_MESSAGE = "User does does not exist";
 	
 	public static final Long ERROR_USER_EXIST = 3L;
 	public static final String ERROR_USER_EXIST_MESSAGE = "User exist";
@@ -23,7 +23,7 @@ public class ErrorConstant {
 	public static final String ERROR_ADD_SESSION_MESSAGE = "Failed in adding session";
 	
 	public static final Long ERROR_SESSION_NOT_EXIST = 8L;
-	public static final String ERROR_SESSION_NOT_EXIST_MESSAGE = "Session not exist";
+	public static final String ERROR_SESSION_NOT_EXIST_MESSAGE = "Session does not exist";
 	
 	public static final Long ERROR_UPDATE_SESSION_STATUS = 9L;
 	public static final String ERROR_UPDATE_SESSION_STATUS_MESSAGE = "Failed in updating session status";
@@ -36,5 +36,14 @@ public class ErrorConstant {
 	
 	public static final Long ERROR_UPDATE_USER = 12L;
 	public static final String ERROR_UPDATE_USER_MESSAGE = "Failed in updating user";
+	
+	public static final Long ERROR_ADD_CHILD = 13L;
+	public static final String ERROR_ADD_CHILD_MESSAGE = "Failed in adding child";
+	
+	public static final Long ERROR_UPDATE_CHILD = 14L;
+	public static final String ERROR_UPDATE_CHILD_MESSAGE = "Failed in editing child";
+	
+	public static final Long ERROR_CHILD_NOT_EXIST = 15L;
+	public static final String ERROR_CHILD_NOT_EXIST_MESSAGE = "Child does not exist";
 
 }

@@ -23,22 +23,28 @@ import com.google.gson.annotations.SerializedName;
 @Entity
 @Table(name = "children", catalog = "babycare")
 public class Child extends BaseModel implements Serializable {
-	private static final long serialVersionUID = 1412920309252583166L;
-	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1416878046123153824L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name="childid")
-	@SerializedName("userId")
+	@SerializedName("childId")
 	private Long childId;
 
-	@Transient
+	@Column(name="userid")
+	@SerializedName("userId")
 	private Long userId;
 
-	@ManyToOne(optional = false)
+/*	@ManyToOne(optional = false)
 	@JoinColumn(name = "userid", referencedColumnName = "userid", 
-		foreignKey = @ForeignKey(name = "FK_children_user"))
+	foreignKey = @ForeignKey(name = "FK_children_user"))*/
+/*	@ManyToOne
+	@JoinColumn(name="userid")
 	private User user;
-
+*/
 	@Column(name="name")
 	@SerializedName("name")
 	private String name;
@@ -81,13 +87,13 @@ public class Child extends BaseModel implements Serializable {
 		this.userId = userId;
 	}
 
-	public User getUser() {
+/*	public User getUser() {
 		return user;
 	}
 
 	public void setUser(User user) {
 		this.user = user;
-	}
+	}*/
 
 	public String getName() {
 		return name;

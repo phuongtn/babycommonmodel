@@ -92,4 +92,8 @@ public class SessionPayload extends BaseModel {
 		this.hardwareId = hardareId;
 		this.status = status;
 	}
+	
+	public SessionPayload() {
+		
+	}
 }

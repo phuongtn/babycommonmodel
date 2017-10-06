@@ -43,4 +43,7 @@ public class UserPayload extends BaseModel {
 		this.email = email;
 		this.provider = provider;
 	}
+
+	public UserPayload() {
+	}
 }

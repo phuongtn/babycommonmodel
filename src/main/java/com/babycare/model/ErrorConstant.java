@@ -1,7 +1,12 @@
 package com.babycare.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ErrorConstant {
 	
+	private static Map<Long, String> errorMap = new HashMap<Long, String>();
+
 	public static final Long ERROR_UNKNOWN = 0L;
 	public static final String ERROR_UNKNOWN_MESSAGE = "Unknown exception";
 	
@@ -10,7 +15,7 @@ public class ErrorConstant {
 
 	public static final Long ERROR_USER_NOT_EXIST = 2L;
 	public static final String ERROR_USER_NOT_EXIST_MESSAGE = "User does does not exist";
-	
+
 	public static final Long ERROR_USER_EXIST = 3L;
 	public static final String ERROR_USER_EXIST_MESSAGE = "User exist";
 
@@ -36,7 +41,7 @@ public class ErrorConstant {
 	public static final String ERROR_CREATE_USER_MESSAGE = "Failed to create user";
 	
 	public static final Long ERROR_UPDATE_SESSION_PUSHID = 11L;
-	public static final String ERROR_UPDATE_SESSION_PUSHID_MESSAGE = "Failed in updat pushId";
+	public static final String ERROR_UPDATE_SESSION_PUSHID_MESSAGE = "Failed to updat pushId";
 	
 	public static final Long ERROR_UPDATE_USER = 12L;
 	public static final String ERROR_UPDATE_USER_MESSAGE = "Failed to update user";
@@ -55,5 +60,33 @@ public class ErrorConstant {
 	
 	public static final Long ERROR_FETCH_CHILD = 17L;
 	public static final String ERROR_FETCH_CHILD_MESSAGE = "Failed to fetch child";
+
+	static {
+		errorMap.put(ERROR_UNKNOWN, ERROR_UNKNOWN_MESSAGE);
+		errorMap.put(ERROR_EMAIL_INVALID, ERROR_EMAIL_INVALID_MESSAGE);
+		errorMap.put(ERROR_USER_NOT_EXIST, ERROR_USER_NOT_EXIST_MESSAGE);
+		errorMap.put(ERROR_USER_EXIST, ERROR_USER_EXIST_MESSAGE);
+		errorMap.put(ERROR_INPUT_ERROR, ERROR_INPUT_ERROR_MESSAGE);
+		errorMap.put(ERROR_UPDATE_SESSION, ERROR_UPDATE_SESSION_MESSAGE);
+		errorMap.put(ERROR_ADD_SESSION, ERROR_ADD_SESSION_MESSAGE);
+		errorMap.put(ERROR_SESSION_NOT_EXIST, ERROR_SESSION_NOT_EXIST_MESSAGE);
+		errorMap.put(ERROR_UPDATE_SESSION_STATUS, ERROR_UPDATE_SESSION_STATUS_MESSAGE);
+		errorMap.put(ERROR_CREATE_USER, ERROR_CREATE_USER_MESSAGE);
+		errorMap.put(ERROR_UPDATE_SESSION_PUSHID, ERROR_UPDATE_SESSION_PUSHID_MESSAGE);
+		errorMap.put(ERROR_UPDATE_USER, ERROR_UPDATE_USER_MESSAGE);
+		errorMap.put(ERROR_ADD_CHILD, ERROR_ADD_CHILD_MESSAGE);
+		errorMap.put(ERROR_UPDATE_CHILD, ERROR_UPDATE_CHILD_MESSAGE);
+		errorMap.put(ERROR_CHILD_NOT_EXIST, ERROR_CHILD_NOT_EXIST_MESSAGE);
+		errorMap.put(ERROR_REMOVE_CHILD, ERROR_REMOVE_CHILD_MESSAGE);
+		errorMap.put(ERROR_FETCH_CHILD, ERROR_FETCH_CHILD_MESSAGE);
+	}
+	
+	public static Error getError(Long errorCode) {
+		return new Error(errorCode, errorMap.get(errorCode));
+	}
+	
+	public static Error getError(Long errorCode, String exception) {
+		return new Error(errorCode, errorMap.get(errorCode), exception);
+	}
 
 }

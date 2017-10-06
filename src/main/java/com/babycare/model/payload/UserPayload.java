@@ -1,10 +1,14 @@
 package com.babycare.model.payload;
 
 import com.babycare.model.BaseModel;
+import com.google.gson.annotations.SerializedName;
 
 public class UserPayload extends BaseModel {
+	@SerializedName("userId")
 	private Long userId = null;
+	@SerializedName("email")
 	private String email = null;
+	@SerializedName("provider")
 	private String provider = null;
 
 	public Long getUserId() {
@@ -34,7 +38,7 @@ public class UserPayload extends BaseModel {
 	public UserPayload(Long userId) {
 		this.userId = userId;
 	}
-	
+
 	public UserPayload(String email, String provider) {
 		this.email = email;
 		this.provider = provider;

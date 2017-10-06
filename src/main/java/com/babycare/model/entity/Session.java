@@ -49,6 +49,9 @@ public class Session extends BaseModel implements Serializable {
 	@Column(name="platform")
 	@SerializedName("platform")
 	private String platform;
+
+	@Column(name="status")
+	@SerializedName("status")
 	private Integer status;
 
 	@Transient

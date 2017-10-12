@@ -60,6 +60,9 @@ public class ErrorConstant {
 	
 	public static final Long ERROR_FETCH_CHILD = 17L;
 	public static final String ERROR_FETCH_CHILD_MESSAGE = "Failed to fetch child";
+	
+	public static final Long ERROR_USER_NOT_SIGNIN = 18L;
+	public static final String ERROR_USER_NOT_SIGNIN_MESSAGE = "User does not sign in yet";
 
 	static {
 		errorMap.put(ERROR_UNKNOWN, ERROR_UNKNOWN_MESSAGE);
@@ -79,6 +82,7 @@ public class ErrorConstant {
 		errorMap.put(ERROR_CHILD_NOT_EXIST, ERROR_CHILD_NOT_EXIST_MESSAGE);
 		errorMap.put(ERROR_REMOVE_CHILD, ERROR_REMOVE_CHILD_MESSAGE);
 		errorMap.put(ERROR_FETCH_CHILD, ERROR_FETCH_CHILD_MESSAGE);
+		errorMap.put(ERROR_USER_NOT_SIGNIN, ERROR_USER_NOT_SIGNIN_MESSAGE);
 	}
 	
 	public static Error getError(Long errorCode) {

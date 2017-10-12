@@ -15,6 +15,8 @@ public class User extends BaseModel implements Cloneable {
 	protected String email;
 	@SerializedName("provider")
 	protected String provider;
+	@SerializedName("password")
+	protected String password;
 
 	public User() {}
 
@@ -70,6 +72,15 @@ public class User extends BaseModel implements Cloneable {
 
 	public String getEmail() {
 		return email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public User setPassword(String password) {
+		this.password = password;
+		return this;
 	}
 
 	@Override

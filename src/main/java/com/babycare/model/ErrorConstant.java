@@ -64,6 +64,9 @@ public class ErrorConstant {
 	public static final Long ERROR_USER_NOT_SIGNIN = 18L;
 	public static final String ERROR_USER_NOT_SIGNIN_MESSAGE = "User does not sign in yet";
 
+	public static final Long ERROR_FETCH_CONTENT_TYPE = 19L;
+	public static final String ERROR_FETCH_CONTENT_TYPE_MESSAGE = "Failed to fetch content type";
+
 	static {
 		errorMap.put(ERROR_UNKNOWN, ERROR_UNKNOWN_MESSAGE);
 		errorMap.put(ERROR_EMAIL_INVALID, ERROR_EMAIL_INVALID_MESSAGE);
@@ -83,6 +86,7 @@ public class ErrorConstant {
 		errorMap.put(ERROR_REMOVE_CHILD, ERROR_REMOVE_CHILD_MESSAGE);
 		errorMap.put(ERROR_FETCH_CHILD, ERROR_FETCH_CHILD_MESSAGE);
 		errorMap.put(ERROR_USER_NOT_SIGNIN, ERROR_USER_NOT_SIGNIN_MESSAGE);
+		errorMap.put(ERROR_FETCH_CONTENT_TYPE, ERROR_FETCH_CONTENT_TYPE_MESSAGE);
 	}
 	
 	public static Error getError(Long errorCode) {

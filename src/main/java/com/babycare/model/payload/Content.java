@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Content extends BaseModel implements Cloneable {
 	@SerializedName("contentId")
-	protected Integer contentId;
+	protected Long contentId;
 
 	@SerializedName("contentTypeId")
 	protected Integer contentTypeId;
@@ -43,7 +43,7 @@ public class Content extends BaseModel implements Cloneable {
 	@SerializedName("region")
 	protected Integer region;
 
-	public Integer getContentId() {
+	public Long getContentId() {
 		return contentId;
 	}
 
@@ -110,7 +110,7 @@ public class Content extends BaseModel implements Cloneable {
 		return this;
 	}
 
-	public Content setContentId(Integer contentId) {
+	public Content setContentId(Long contentId) {
 		this.contentId = contentId;
 		return this;
 	}

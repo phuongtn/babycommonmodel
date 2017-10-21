@@ -66,6 +66,9 @@ public class ErrorConstant {
 
 	public static final Long ERROR_FETCH_CONTENT_TYPE = 19L;
 	public static final String ERROR_FETCH_CONTENT_TYPE_MESSAGE = "Failed to fetch content type";
+	
+	public static final Long ERROR_FETCH_SESSION =20L;
+	public static final String ERROR_FETCH_SESSION_MESSAGE ="Failed to fetch sessions";
 
 	static {
 		errorMap.put(ERROR_UNKNOWN, ERROR_UNKNOWN_MESSAGE);
@@ -87,6 +90,7 @@ public class ErrorConstant {
 		errorMap.put(ERROR_FETCH_CHILD, ERROR_FETCH_CHILD_MESSAGE);
 		errorMap.put(ERROR_USER_NOT_SIGNIN, ERROR_USER_NOT_SIGNIN_MESSAGE);
 		errorMap.put(ERROR_FETCH_CONTENT_TYPE, ERROR_FETCH_CONTENT_TYPE_MESSAGE);
+		errorMap.put(ERROR_FETCH_SESSION, ERROR_FETCH_SESSION_MESSAGE);
 	}
 	
 	public static Error getError(Long errorCode) {

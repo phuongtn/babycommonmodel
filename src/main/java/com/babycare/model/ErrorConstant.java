@@ -69,7 +69,10 @@ public class ErrorConstant {
 	
 	public static final Long ERROR_FETCH_SESSION =20L;
 	public static final String ERROR_FETCH_SESSION_MESSAGE ="Failed to fetch sessions";
-
+	
+	public static final Long ERROR_RECORD_NOT_FOUND = 21L;
+	public static final String ERROR_RECORD_NOT_FOUND_MESSAGE = "Record not found";
+	
 	static {
 		errorMap.put(ERROR_UNKNOWN, ERROR_UNKNOWN_MESSAGE);
 		errorMap.put(ERROR_EMAIL_INVALID, ERROR_EMAIL_INVALID_MESSAGE);
@@ -91,6 +94,7 @@ public class ErrorConstant {
 		errorMap.put(ERROR_USER_NOT_SIGNIN, ERROR_USER_NOT_SIGNIN_MESSAGE);
 		errorMap.put(ERROR_FETCH_CONTENT_TYPE, ERROR_FETCH_CONTENT_TYPE_MESSAGE);
 		errorMap.put(ERROR_FETCH_SESSION, ERROR_FETCH_SESSION_MESSAGE);
+		errorMap.put(ERROR_RECORD_NOT_FOUND, ERROR_RECORD_NOT_FOUND_MESSAGE);
 	}
 	
 	public static Error getError(Long errorCode) {

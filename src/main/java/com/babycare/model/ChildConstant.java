@@ -60,8 +60,8 @@ public class ChildConstant {
 		EUROPE("EUROPE", 2), 
 		AFRICA("AFRICA", 3),
 		AUSTRALIA("AUSTRALIA", 4),
-		NorthAmerica("NorthAmerica", 5),
-		SouthAmerica("SouthAmerica", 6),
+		NORTHAMERICA("NORTH AMERICA", 5),
+		SOUTHAMERICA("SOUTH AMERICA", 6),
 		UNKNOWN("UNKNOWN", 7);
 		private String name;
 		private int value;

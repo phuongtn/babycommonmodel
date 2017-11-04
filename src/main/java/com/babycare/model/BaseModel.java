@@ -1,7 +1,7 @@
 package com.babycare.model;
 
 public abstract class BaseModel {
-	
+
 	private Long requestBySessionId;
 
 	protected String getVersion() {

@@ -4,6 +4,7 @@ import com.babycare.model.BaseModel;
 import com.google.gson.annotations.SerializedName;
 
 public class ContentType extends BaseModel implements Cloneable {
+	private static final long serialVersionUID = 1L;
 	@SerializedName("contentTypeId")
 	protected Integer contentTypeId;
 	@SerializedName("type")

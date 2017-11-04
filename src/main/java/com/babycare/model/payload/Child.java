@@ -3,6 +3,7 @@ import com.babycare.model.BaseModel;
 import com.google.gson.annotations.SerializedName;
 
 public class Child extends BaseModel implements Cloneable {
+	private static final long serialVersionUID = 1L;
 	@SerializedName("childId")
 	protected Long childId;
 	@SerializedName("userId")

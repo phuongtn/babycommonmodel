@@ -5,7 +5,7 @@ import com.babycare.model.BaseModel;
 import com.google.gson.annotations.SerializedName;
 
 public class Session extends BaseModel implements Cloneable {
-
+	private static final long serialVersionUID = 1L;
 	@SerializedName("sessionId")
 	protected Long sessionId;
 	@SerializedName("user")

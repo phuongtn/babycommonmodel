@@ -72,7 +72,10 @@ public class ErrorConstant {
 	
 	public static final Long ERROR_RECORD_NOT_FOUND = 21L;
 	public static final String ERROR_RECORD_NOT_FOUND_MESSAGE = "Record not found";
-	
+
+	public static final Long ERROR_ADD_CONTENT = 22L;
+	public static final String ERROR_ADD_CONTENT_MESSAGE = "Failed to add content";
+
 	static {
 		errorMap.put(ERROR_UNKNOWN, ERROR_UNKNOWN_MESSAGE);
 		errorMap.put(ERROR_EMAIL_INVALID, ERROR_EMAIL_INVALID_MESSAGE);
@@ -95,6 +98,7 @@ public class ErrorConstant {
 		errorMap.put(ERROR_FETCH_CONTENT_TYPE, ERROR_FETCH_CONTENT_TYPE_MESSAGE);
 		errorMap.put(ERROR_FETCH_SESSION, ERROR_FETCH_SESSION_MESSAGE);
 		errorMap.put(ERROR_RECORD_NOT_FOUND, ERROR_RECORD_NOT_FOUND_MESSAGE);
+		errorMap.put(ERROR_ADD_CONTENT, ERROR_ADD_CONTENT_MESSAGE);
 	}
 	
 	public static Error getError(Long errorCode) {

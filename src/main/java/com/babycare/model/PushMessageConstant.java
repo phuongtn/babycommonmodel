@@ -1,6 +1,7 @@
 package com.babycare.model;
 
 public class PushMessageConstant {
+	public static final String PAYLOAD_ATTRIBUTE_MESSAGE_ID = "message_id";
 	public static final String PAYLOAD_ATTRIBUTE_MESSAGE = "message";
 	public static final String PAYLOAD_ATTRIBUTE_ACTION = "action";
 	public static final String MESSAGE_DELETED = "Message Deleted";

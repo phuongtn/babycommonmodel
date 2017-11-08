@@ -1,7 +1,9 @@
 package com.babycare.model;
 
-public abstract class BaseModel {
+import com.google.gson.annotations.SerializedName;
 
+public abstract class BaseModel {
+	@SerializedName("requestBySessionId")
 	private Long requestBySessionId;
 
 	protected String getVersion() {

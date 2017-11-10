@@ -76,6 +76,9 @@ public class ErrorConstant {
 	public static final Long ERROR_ADD_CONTENT = 22L;
 	public static final String ERROR_ADD_CONTENT_MESSAGE = "Failed to add content";
 
+	public static final Long ERROR_REMOVE_USER = 23L;
+	public static final String ERROR_REMOVE_USER_MESSAGE = "Failed to remove user";
+
 	static {
 		errorMap.put(ERROR_UNKNOWN, ERROR_UNKNOWN_MESSAGE);
 		errorMap.put(ERROR_EMAIL_INVALID, ERROR_EMAIL_INVALID_MESSAGE);

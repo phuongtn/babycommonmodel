@@ -20,6 +20,8 @@ public class Child extends BaseModel implements Cloneable {
 	protected Integer gender;
 	@SerializedName("region")
 	protected Integer region;
+	@SerializedName("region")
+	protected User user;
 
 	public Child setUserId(Long userId) {
 		this.userId = userId;
@@ -90,5 +92,13 @@ public class Child extends BaseModel implements Cloneable {
 	public Child clone() throws CloneNotSupportedException { 
 		Child clone= (Child) super.clone();
 		return clone;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 }

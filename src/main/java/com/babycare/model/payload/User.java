@@ -24,6 +24,9 @@ public class User extends BaseModel implements Cloneable {
 
 	@SerializedName("sessions")
 	protected Set<Session> sessions = new HashSet<Session>(0);
+	
+	@SerializedName("children")
+	protected Set<Child> children = new HashSet<Child>(0);
 
 	public User() {}
 
@@ -90,13 +93,16 @@ public class User extends BaseModel implements Cloneable {
 		return this;
 	}
 
-
 	public Set<Session> getSessions() {
 		return sessions;
 	}
 
-	public void setSessions(Set<Session> sessions) {
-		this.sessions = sessions;
+	public Set<Child> getChildren() {
+		return children;
+	}
+
+	public void setChildren(Set<Child> children) {
+		this.children = children;
 	}
 
 	@Override

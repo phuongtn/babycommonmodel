@@ -79,6 +79,9 @@ public class ErrorConstant {
 	public static final Long ERROR_REMOVE_USER = 23L;
 	public static final String ERROR_REMOVE_USER_MESSAGE = "Failed to remove user";
 
+	public static final Long ERROR_FETCH_DATA = 24L;
+	public static final String ERROR_FETCH_DATA_MESSAGE = "Failed to fetch data";
+
 	static {
 		errorMap.put(ERROR_UNKNOWN, ERROR_UNKNOWN_MESSAGE);
 		errorMap.put(ERROR_EMAIL_INVALID, ERROR_EMAIL_INVALID_MESSAGE);
@@ -102,6 +105,8 @@ public class ErrorConstant {
 		errorMap.put(ERROR_FETCH_SESSION, ERROR_FETCH_SESSION_MESSAGE);
 		errorMap.put(ERROR_RECORD_NOT_FOUND, ERROR_RECORD_NOT_FOUND_MESSAGE);
 		errorMap.put(ERROR_ADD_CONTENT, ERROR_ADD_CONTENT_MESSAGE);
+		errorMap.put(ERROR_REMOVE_USER, ERROR_REMOVE_USER_MESSAGE);
+		errorMap.put(ERROR_FETCH_DATA, ERROR_FETCH_DATA_MESSAGE);
 	}
 	
 	public static Error getError(Long errorCode) {

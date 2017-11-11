@@ -11,7 +11,7 @@ public class Content extends BaseModel implements Cloneable {
 	protected Long contentId;
 
 	@SerializedName("contentTypeId")
-	protected Integer contentTypeId;
+	protected Long contentTypeId;
 
 	@SerializedName("contentType")
 	protected ContentType contentType;
@@ -50,7 +50,7 @@ public class Content extends BaseModel implements Cloneable {
 		return contentId;
 	}
 
-	public Integer getContentTypeId() {
+	public Long getContentTypeId() {
 		return contentTypeId;
 	}
 
@@ -128,7 +128,7 @@ public class Content extends BaseModel implements Cloneable {
 		return this;
 	}
 
-	public Content setContentTypeId(Integer contentTypeId) {
+	public Content setContentTypeId(Long contentTypeId) {
 		this.contentTypeId = contentTypeId;
 		return this;
 	}

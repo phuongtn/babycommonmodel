@@ -8,7 +8,6 @@ import com.google.gson.annotations.SerializedName;
 public class PagerContent<T extends BaseModel> extends BaseModel {
 	@SerializedName("content")
 	private List<T> content;
-	
 	@SerializedName("last")
 	private Boolean last;
 	@SerializedName("totalElements")

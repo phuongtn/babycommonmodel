@@ -20,7 +20,7 @@ public class Child extends BaseModel implements Cloneable {
 	protected Integer gender;
 	@SerializedName("region")
 	protected Integer region;
-	@SerializedName("region")
+	@SerializedName("user")
 	protected User user;
 
 	public Child setUserId(Long userId) {

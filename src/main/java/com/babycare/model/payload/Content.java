@@ -1,5 +1,9 @@
 package com.babycare.model.payload;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import com.babycare.model.BaseModel;
 import com.google.gson.annotations.SerializedName;
 
@@ -169,5 +173,20 @@ public class Content extends BaseModel implements Cloneable {
 	public Content clone() throws CloneNotSupportedException {
 		Content clone = (Content) super.clone();
 		return clone;
+	}
+
+	@Override
+	public boolean equals(Object rhs) {
+		return EqualsBuilder.reflectionEquals(this, rhs, false);
+	}
+
+	@Override
+	public int hashCode() {
+		return HashCodeBuilder.reflectionHashCode(this, false);
+	}
+
+	@Override
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
 	}
 }
